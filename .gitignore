@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+backend/smartbooking.db
+.venv/
+venv/
+.env
+.DS_Store

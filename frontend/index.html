@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartBooking | Ride smarter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">S</span><span>smart<span class="brand-accent">booking</span><small>MOVE WITH CONFIDENCE</small></span></a>
+    <nav><a href="#book">Book a ride</a><a href="#history">My bookings</a><a href="#assistant">AI assistant</a></nav>
+    <span class="live-pill"><i></i> DEMO LIVE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> YOUR RIDE, REIMAGINED</div>
+        <h1>Every journey<br>starts with <em>smart.</em></h1>
+        <p>Book a ride, track your booking history, and get a digital receipt — all in one clean experience.</p>
+        <div class="hero-actions"><a class="button primary" href="#book">Book your ride <span>↗</span></a><a class="text-link" href="#how">How it works <span>↓</span></a></div>
+        <div class="hero-stats"><div><strong>4</strong><span>Ride options</span></div><div><strong>10%</strong><span>Driver commission</span></div><div><strong>24/7</strong><span>Booking demo</span></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="route-line"><span class="route-dot"></span><span class="route-dot end"></span></div>
+        <div class="floating-card card-top"><span class="mini-icon">↗</span><span><b>Smart route</b><small>Simple. Fast. Reliable.</small></span></div>
+        <div class="car-scene"><div class="car-glow"></div><svg viewBox="0 0 420 190" role="img" aria-label="Illustration of a modern car"><defs><linearGradient id="carPaint" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#b9a7ff"/><stop offset="1" stop-color="#7554ee"/></linearGradient></defs><path d="M65 112 L92 76 Q103 59 130 55 L244 55 Q269 57 291 80 L333 103 Q354 110 357 130 L352 147 L54 147 L51 127 Q51 116 65 112Z" fill="url(#carPaint)" stroke="#d6ccff" stroke-width="2"/><path d="M112 78 Q120 67 139 66 L184 66 L184 100 L91 100Z" fill="#20233e" stroke="#aaa1ff" stroke-width="2"/><path d="M196 66 L241 67 Q260 68 279 88 L291 100 L196 100Z" fill="#20233e" stroke="#aaa1ff" stroke-width="2"/><path d="M53 125 L92 125 M315 122 L355 122" stroke="#ffb66b" stroke-width="5" stroke-linecap="round"/><circle cx="111" cy="145" r="26" fill="#17182b" stroke="#9384ff" stroke-width="5"/><circle cx="111" cy="145" r="10" fill="#c7c0e8"/><circle cx="298" cy="145" r="26" fill="#17182b" stroke="#9384ff" stroke-width="5"/><circle cx="298" cy="145" r="10" fill="#c7c0e8"/></svg></div>
+        <div class="floating-card card-bottom"><span class="check-icon">✓</span><span><b>Booking confirmed</b><small>Digital receipt ready</small></span></div>
+        <div class="art-label">SMART MOBILITY <span>·</span> 01 / 04</div>
+      </div>
+    </section>
+
+    <section class="feature-strip" id="how">
+      <div><span class="feature-icon">⌁</span><span><b>Transparent fares</b><small>Know the estimate upfront</small></span></div>
+      <div><span class="feature-icon">▤</span><span><b>Digital receipts</b><small>Booking details in one place</small></span></div>
+      <div><span class="feature-icon">◈</span><span><b>AI-powered help</b><small>Gemma assistant via Ollama</small></span></div>
+    </section>
+
+    <section class="work-grid">
+      <div class="panel booking-panel" id="book">
+        <div class="section-kicker">01 / BOOK A RIDE</div><h2>Your next trip,<br><span>sorted.</span></h2>
+        <p class="muted">Enter your trip details to create a demo booking.</p>
+        <form id="bookingForm">
+          <label>Passenger name<input name="customer" placeholder="e.g. Priya Sharma" required maxlength="80"></label>
+          <div class="two-fields"><label>Pickup location<input name="pickup" placeholder="Where from?" required maxlength="120"></label><label>Destination<input name="destination" placeholder="Where to?" required maxlength="120"></label></div>
+          <div class="two-fields"><label>Distance (km)<input name="distance" type="number" min="0.1" max="1000" step="0.1" value="5" required></label><label>Choose a ride<select name="vehicle"><option>Bike</option><option selected>Mini</option><option>Sedan</option><option>SUV</option></select></label></div>
+          <div class="fare-preview"><span><small>ESTIMATED FARE</small><strong id="fareEstimate">₹110.00</strong></span><span class="fare-note">Includes base fare<br>+ distance rate</span></div>
+          <button class="button primary full" type="submit">Confirm demo booking <span>→</span></button>
+          <p class="form-message" id="bookingMessage" role="status"></p>
+        </form>
+      </div>
+
+      <div class="side-column">
+        <div class="panel pricing-panel">
+          <div class="section-kicker">02 / SIMPLE PRICING</div><h2>Pick your <span>ride.</span></h2>
+          <div class="price-row"><span class="vehicle-icon">ϟ</span><span class="price-name"><b>Bike</b><small>Quick solo trips</small></span><strong>₹8<small>/km + ₹20</small></strong></div>
+          <div class="price-row"><span class="vehicle-icon">◧</span><span class="price-name"><b>Mini</b><small>Everyday comfort</small></span><strong>₹12<small>/km + ₹50</small></strong></div>
+          <div class="price-row"><span class="vehicle-icon">▱</span><span class="price-name"><b>Sedan</b><small>Extra comfort</small></span><strong>₹16<small>/km + ₹80</small></strong></div>
+          <div class="price-row"><span class="vehicle-icon">◇</span><span class="price-name"><b>SUV</b><small>Room for everyone</small></span><strong>₹22<small>/km + ₹120</small></strong></div>
+          <p class="tiny-note">* Competition demo rates. No real payment is collected.</p>
+        </div>
+        <div class="panel receipt-panel">
+          <div class="receipt-top"><span class="section-kicker">03 / DIGITAL RECEIPT</span><span class="receipt-stamp">DEMO</span></div>
+          <div class="receipt-illustration">▤</div><h3>All your trip details.<br>One neat receipt.</h3><p class="muted">Create a booking to unlock a printable receipt with fare, driver, status and booking ID.</p>
+          <button class="button secondary full" id="latestReceiptBtn" type="button">View latest receipt <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel history-panel" id="history">
+      <div class="history-heading"><div><div class="section-kicker">04 / BOOKING HISTORY</div><h2>Your journeys, <span>in one place.</span></h2></div><button class="button secondary" id="refreshBtn">↻ Refresh</button></div>
+      <div class="table-wrap"><table><thead><tr><th>BOOKING ID</th><th>ROUTE</th><th>RIDE</th><th>FARE</th><th>STATUS</th><th>RECEIPT</th></tr></thead><tbody id="bookingRows"><tr><td colspan="6" class="empty-row">Loading bookings…</td></tr></tbody></table></div>
+    </section>
+
+    <section class="panel ai-panel" id="assistant">
+      <div class="ai-symbol">✳</div><div class="ai-copy"><div class="section-kicker">05 / GEMMA AI ASSISTANT</div><h2>Need a hand? <span>Ask Gemma.</span></h2><p class="muted">Ask about booking steps, demo fares, receipts or how the system works. Powered locally by Ollama.</p></div>
+      <form id="aiForm" class="ai-form"><label for="aiQuestion">Your question</label><div class="ai-input-row"><input id="aiQuestion" placeholder="How is my fare calculated?" required maxlength="500"><button class="button primary" type="submit" id="aiButton">Ask AI ↗</button></div><p class="ai-answer" id="aiAnswer" role="status">Gemma's answer will appear here.</p></form>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-icon">S</span><span>smart<span class="brand-accent">booking</span><small>MOVE WITH CONFIDENCE</small></span></a><span>Student project · Demo mode · Built for smarter mobility</span><a href="#book">Back to top ↑</a></footer>
+
+  <dialog id="receiptDialog"><div class="receipt-paper" id="receiptContent"></div><div class="dialog-actions"><button class="button secondary" id="closeReceipt">Close</button><button class="button primary" id="printReceipt">Print receipt ⤓</button></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
